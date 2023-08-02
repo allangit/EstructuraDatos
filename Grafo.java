@@ -44,13 +44,18 @@ public class Grafo {
         M[j][i]=false;
     }
     
+    public boolean ExisteArista(int i, int j){
+        
+        
+        return M[i][j];
+    }
+    
     public int Tam(){
         
-  
         return M.length;
     }
     
-    public int[] vecinos(int i){
+    public int[] Vecinos(int i){
         
         int[] V=new int[M.length];
         int k=0;
@@ -59,8 +64,7 @@ public class Grafo {
             if (M[i][j]==true){
                 
                 V[k]=j;
-                k++;
-     
+                k++;     
             }    
         }
         
