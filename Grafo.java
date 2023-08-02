@@ -30,17 +30,32 @@ public class Grafo {
     
     public void AgregarArista(int i, int j){
         
+        Verificacion(i);
+        Verificacion(j);
+        VericarCiclos(i, j);
         
         M[i][j]=true;
         M[j][i]=true;
     }
-    
+
     public void BorrarArista(int i, int j){
         
         M[i][j]=false;
         M[j][i]=false;
     }
     
+    public void Verificacion(int i) throws IllegalArgumentException {
+        if(i> M.length)
+            throw new IllegalArgumentException("Arista fuera de rango");
+        
+        if(i <0 )
+            throw new IllegalArgumentException("posición no puede ser negativa");
+    }
     
-    
+    public void VericarCiclos(int i, int j) throws IllegalArgumentException {
+        if(i==j)
+            
+            throw new IllegalArgumentException("No puede existir Ciclos en Grafo");
+    }
+  
 }
