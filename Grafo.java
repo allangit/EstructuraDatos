@@ -20,4 +20,27 @@ package com.mycompany.practica;
 
 public class Grafo {
     
+    private boolean M[][];
+    
+    public Grafo(int vertices){
+        
+        M=new boolean[vertices][vertices];
+        
+    }
+    
+    public void AgregarArista(int i, int j){
+        
+        
+        M[i][j]=true;
+        M[j][i]=true;
+    }
+    
+    public void BorrarArista(int i, int j){
+        
+        M[i][j]=false;
+        M[j][i]=false;
+    }
+    
+    
+    
 }
