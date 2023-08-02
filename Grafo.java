@@ -44,6 +44,29 @@ public class Grafo {
         M[j][i]=false;
     }
     
+    public int Tam(){
+        
+  
+        return M.length;
+    }
+    
+    public int[] vecinos(int i){
+        
+        int[] V=new int[M.length];
+        int k=0;
+        for(int j=0; j<M.length; j++){
+            
+            if (M[i][j]==true){
+                
+                V[k]=j;
+                k++;
+     
+            }    
+        }
+        
+        return V;
+    }
+ 
     public void Verificacion(int i) throws IllegalArgumentException {
         if(i> M.length)
             throw new IllegalArgumentException("Arista fuera de rango");
