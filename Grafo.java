@@ -1,6 +1,6 @@
 
 /*
-    Ejercicio grafos
+    Ejercicio grafos 1.
 
         1.implementar matriz de adyacencia
         2.implemetar el metodo ingresar arista
